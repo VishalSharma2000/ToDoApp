@@ -1,0 +1,157 @@
+* {
+    /* padding and margin are included into the width and height set  */
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("images/checklist.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* header section */
+
+.container {
+    width: 70%;
+    height: auto;
+    background-color: #f44336;
+    margin: auto;
+    margin-top: 0px;
+    padding: 25px 30px;
+    color: #fff;
+    /* makes the display of the content as table  */
+    display: table;
+    clear: both;
+}
+/* 
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+h2 {
+    margin: 0px;
+    margin-bottom: 9px;
+}
+
+.userInput {
+    width: 70%;
+    height: 39px;
+    margin: 0px;
+    border: none;   
+    padding: 8px;
+    float: left;
+    font-size: 15px;
+}
+
+.addTaskBtn {
+    padding: 10px;
+    width: 25%; 
+    background-color: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.addTaskBtn:hover {
+    background-color: #bbb;
+}
+
+/* onclick effect for span  */
+.click1 {
+    border: inset #bbb .1px;
+}
+
+/* todos heading and time section  */
+h4 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Baloo Bhaina 2', cursive;
+    background-color: yellow;
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+/* Todos list section  */
+
+/* setting all the odd child different background color  */ 
+ul li:nth-child(odd) {
+    background-color: #c5ebec;
+}
+
+ul {
+    margin: 0px;
+    margin-top: 30px;
+    padding: 0px;
+}
+
+.task{
+    width: 50%;
+    border-radius: 10px;
+    margin: auto;
+    cursor: pointer;
+    padding: 20px;
+    list-style-type: none;
+    background: rgb(189, 202, 219);
+    font-size: 20px;
+    margin-bottom: 5px;
+    user-select: none;
+}
+
+.task:hover {
+    background-color: rgb(196, 207, 130);
+}
+
+/* if the user click for one time , then striking out the task  */
+.checked {
+    background-color: #888 !important;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Adding a checked mark before the task */
+ul li.checked::before {
+    content: " ";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width:0 2px 2px 0;
+    /* top: 10px; */
+    right: 1100px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+
+/* close button for task  */
+.close {
+    /* position: absolute;    so that the presence of 'x' does not effect the position of other element */
+    /* right: 380px; */
+    /* bottom: 165px; */
+    float: right;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.close:hover {
+    background-color: red;
+    color: white;
+}
+
+/* done event  */
+.done {
+    background-color: green;
+}
